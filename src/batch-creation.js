@@ -16,7 +16,7 @@ export async function batchCreate(req, res) {
     relax_column_count: true,
     skip_records_with_error: true,
     trim: true,
-    on_record: (record) => record[0].includes("--X-INSOMNIA" || "Content") || !record[0].length ? null : record
+    on_record: (record) => record[0].includes("--X" || "Content") || !record[0].length ? null : record
   }))
 
   const tasks = []
